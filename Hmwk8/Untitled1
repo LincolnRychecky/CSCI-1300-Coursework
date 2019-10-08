@@ -1,0 +1,247 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <algorithm>
+#include <math.h>
+#include <sstream>
+
+using namespace std;
+
+//planned classes
+
+//Supplies class
+//includes oxen, food, bullets, spare wagon parts, as well as extra sets of clothes
+//will include functions that will either add or remove from supplies count depending on actions
+
+//character class 
+//each character object will have a name and health status
+//get typhoid, break leg, get lost, etc. will be actions
+
+//Party class
+//a party object will be made up of an array of 5 characters
+//a party will have private variables to hold the number of characters still alive as well as travel pace,
+//general health of party, as well as rationing setting for food. 
+
+//map class
+//destination will have a name and miles from most recent starting point 
+//will have a function for asking the traveler what the want upon their arrival as well as the rest of the menu of functions
+//functions like "travel 1 day" and "rest 1 day" will also be encapsulated within this class
+//function to show traveler their current location
+//The map class functions as the user's journey and helps keep track of distace from the next location. 
+
+//in the main there will be a series of random objects which help to determine if a character
+//gets sick or if a wagon part breaks, etc the main will also handle the trasition parts like when the 
+//characters choose to cross a river or float it, etc
+
+
+
+
+//testing character class
+    
+    /*
+    Character lead("Lincoln", true);
+    
+    cout << lead.getName() << endl;
+    
+    cout << lead.getDead() << endl;
+    
+    cout << lead.getIsSick() << endl;
+    
+    cout << lead.getIsLeader() << endl;
+    
+    lead.setName("Mick");
+    
+    lead.setDead(true);
+    
+    lead.setIsSick(true);
+    
+    lead.setIsLeader(false);
+    
+    cout << lead.getName() << endl;
+    
+    cout << lead.getDead() << endl;
+    
+    cout << lead.getIsSick() << endl;
+    
+    cout << lead.getIsLeader() << endl;
+    
+    */
+    
+    //Testig map class
+    
+    /*
+    map newMap(1);
+    
+    newMap.loadMapInfo("milestones.txt");
+    
+    cout << newMap.getNameAt(0) << endl;
+    
+    cout << newMap.getMilageAt(0) << endl;
+    
+    cout << newMap.getRiverDepthAt(0) << endl;
+    
+    cout << newMap.getTypeAt(0) << endl;
+    
+    cout << newMap.getNameAt(14) << endl;
+    
+    cout << newMap.getMilageAt(14) << endl;
+    
+    cout << newMap.getTypeAt(14) << endl;
+    
+    cout << newMap.getRiverDepthAt(14) << endl;
+    
+    cout << newMap.getTypeAt(3) << endl;
+    */
+    
+    //Testing group class
+    
+  //  cout << one.getName() << endl;
+    
+  //  cout << g1.getHealthOfCharacter("Lincoln") << endl;
+    
+    /*
+    g1.UpdateHealth(true, "Lincoln");
+    
+    cout << g1.getHealthOfCharacter("Lincoln") << endl;
+    
+    cout << g1.getDeadOfCharacter("Lincoln") << endl;
+    
+    g1.characterDies("Lincoln");
+    
+    cout << g1.getDeadOfCharacter("Lincoln") << endl;
+    
+    cout << g1.getNumCharacters() << endl;
+    
+    cout << g1.getNameCharacterAt(4) << endl;
+    
+    g1.characterDies("John");
+    
+    g1.characterDies("Mary");
+    
+    g1.characterDies("Lilly");
+    
+    g1.characterDies("Gary");
+    
+    cout << g1.getNumCharacters() << endl;
+    */
+   // cout << endl << endl;
+    
+    
+    
+  //  g1.advance(1, newMap1);
+    
+  //  cout << newMap1.getMonth() << "-" << newMap1.getDay() << endl;
+    
+    // newMap1.setDay(30);
+     
+   //  cout << newMap1.getMonth() << "-" << newMap1.getDay() << endl;
+     
+     
+   //  g1.setFood(0);
+   //  g1.setNumParts(0);
+   //  g1.setNumOxen(0);
+   //  g1.setBullets(0);
+    // cout << g1.getFood() << " " << g1.getNumParts() << " " << g1.getNumOxen() << " " << g1.getCash() << endl;
+     
+    // cout << "Date: " << newMap1.getMonth() << "-" << newMap1.getDay() << endl;
+     
+    // cout << newMap1.getMilesCovered() << " Miles covered" << endl;
+     
+    // g1.encounterRaiders(400);
+     
+    // g1.possibleCalamity(newMap1);
+     
+     //cout << g1.getFood() << " " << g1.getNumParts() << " " << g1.getNumOxen() << " " << g1.getCash() << endl;
+     
+     //cout << newMap1.getMonth() << "-" << newMap1.getDay() << endl;
+     
+    // g1.advance(3, newMap1);
+     
+    // cout << "Date: " << newMap1.getMonth() << "-" << newMap1.getDay() << endl;
+     
+    // cout << newMap1.getMilesCovered() << " Miles covered" << endl;
+     
+     /*
+     cout << "Would you like to advance again? (y/n)" << endl;
+     
+     string choice;
+     
+     getline(cin,choice);
+     
+     while(choice == "y"){
+         cout << "Date: " << newMap1.getMonth() << "-" << newMap1.getDay() << endl;
+     
+     cout << newMap1.getMilesCovered() << " Miles covered" << endl;
+     
+     g1.advance(2, newMap1);
+     
+     cout << "Date: " << newMap1.getMonth() << "-" << newMap1.getDay() << endl;
+     
+     cout << newMap1.getMilesCovered() << " Miles covered" << endl;
+     
+     cout << "Would you like to advance again? (y/n)" << endl;
+     
+     getline(cin,choice);
+         
+     }
+    */
+    /*
+     cout << g1.getCash() << endl;
+     
+     g1.goToStore(0);
+     
+     cout << g1.getNumOxen() << endl;
+     cout << g1.getFood() << endl;
+     cout << g1.getNumBullets() << endl;
+     cout << g1.getCash() << endl;
+     cout << g1.getNumMedKits() << endl;
+     */
+     
+     /*
+     Character one("Lincoln", true);
+    
+    Character two("John", false);
+    
+    Character three("Mary", false);
+    
+    Character four("Gary", false);
+    
+    Character five("Lilly", false);
+    
+    Character char1[] = {one,two,three,four,five};
+    
+    Group g1(char1);
+    
+    map newMap1(3,28);
+    
+    newMap1.loadMapInfo("milestones.txt");
+    */
+     /*
+     cout << g1.getNameCharacterAt(0) << " " << g1.getNameCharacterAt(1) << " " << g1.getNameCharacterAt(2) << " " << g1.getNameCharacterAt(3) << " " << g1.getNameCharacterAt(4) << " " << endl;
+     
+     newMap1.setMilesCovered(500);
+     
+    
+     string choice1;
+     int choice1holder = 1;
+     while(choice1holder = 1){
+         cout << "wanna keep looping?" << endl;
+         getline(cin, choice1);
+         choice1holder = stoi(choice1);
+         
+         g1.possibleCalamity(newMap1);
+         
+         cout << g1.getNameCharacterAt(0) << " " << g1.getNameCharacterAt(1) << " " << g1.getNameCharacterAt(2) << " " << g1.getNameCharacterAt(3) << " " << g1.getNameCharacterAt(4) << " " << endl;
+     }
+     
+     
+     
+     */
+     
+    OregonTrail newGame1; //create an oregon trail object
+     
+    newGame1.playGame(); //call the play game function on that object to play the game
+    
+     //I had to make it so that the milage was between 100 and 220 for them to successfully get there. 
+     //Also gave the user $1500 to start with so they had enough money. Also, every advance had to be 10 days so the 
+     //user didnt run out of time no matter what happened. Other than that, I stuck very closely to the template
